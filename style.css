@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+}
+table {
+    width: 90vw;
+}
+span {
+    color: red;
+    margin: 0;
+    text-align: center;
+}
+p {
+    margin: 0;
+}
+.id {
+    text-align: center;
+}
+.name {
+    text-align: center;
+    font-style: italic;
+    font-size: large;
+}
