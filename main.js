@@ -13,8 +13,13 @@ async function loader() {
       let nome = document.createElement("td");
       let input = document.createElement("td");
 
-      id.className = "id"
-      nome.className = "name"
+      if (element.id % 2 == 0) {
+        row.style.backgroundColor = "#db7da7";
+      } else {
+        row.style.backgroundColor = "#dfa0c9";
+      }
+      id.className = "id";
+      nome.className = "name";
 
       id.innerHTML = element.id;
       item.innerHTML = element.name;
@@ -36,9 +41,8 @@ async function loader() {
         textarea.rows = 3;
         nome.appendChild(textarea);
         row.appendChild(input);
-      }
-      else{
-        nome.colSpan="2"
+      } else {
+        nome.colSpan = "2";
       }
 
       table.appendChild(row);
@@ -50,7 +54,11 @@ loader();
 
 async function sender(element) {
   let row = element.parentElement.parentElement;
-  if (confirm('Tem certeza que deseja assinar '+row.children[1].innerHTML+' ?')) {
+  if (
+    confirm(
+      "Tem certeza que deseja assinar " + row.children[1].innerHTML + " ?"
+    )
+  ) {
     let id = row.firstChild.innerHTML;
     let name = row.children[2].firstChild.value.trim();
 
@@ -73,6 +81,6 @@ async function sender(element) {
   }
 }
 
-setTimeout(function(){
+setTimeout(function () {
   window.location.reload();
 }, 840000);
