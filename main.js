@@ -80,7 +80,3 @@ async function sender(element) {
     }
   }
 }
-
-setTimeout(function () {
-  window.location.reload();
-}, 840000);
